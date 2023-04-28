@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.form__input {
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.form__input:focus {
+  outline: 2px solid blue;
+}
+.form__button {
+  width: 200px;
+  border-radius: 10px;
+
+  background-color: cornflowerblue;
+}
+.form__button:hover,
+.form__button:focus {
+  background-color: cadetblue;
+  color: beige;
+}

@@ -1,0 +1,12 @@
+.button__remove {
+  margin-left: 12px;
+
+  border-radius: 10px;
+
+  background-color: cornflowerblue;
+}
+.button__remove:hover,
+.button__remove:focus {
+  background-color: cadetblue;
+  color: beige;
+}
