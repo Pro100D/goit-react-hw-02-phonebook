@@ -27,9 +27,9 @@ export default ConatctList;
 ConatctList.propTypes = {
   contactsArray: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      number: PropTypes.number.isRequired,
+      number: PropTypes.string.isRequired,
     })
   ).isRequired,
   handleDelete: PropTypes.func.isRequired,

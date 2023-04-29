@@ -17,7 +17,7 @@ class Form extends Component {
     evt.preventDefault();
 
     const contactsArray = this.props.contacts;
-    const nameContact = evt.currentTarget.name.value;
+    const nameContact = evt.target.elements.name.value;
 
     if (
       contactsArray.findIndex(contact => nameContact === contact.name) !== -1
