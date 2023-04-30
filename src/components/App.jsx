@@ -11,16 +11,25 @@ class App extends Component {
     filter: '',
   };
   // Добавление нового контакта
-  addContact = contact => {
-    const newContact = {
-      id: shortid.generate(),
-      name: contact.name,
-      number: contact.number,
-    };
+  addContact = contactAdd => {
+    const CheckContact = this.state.contacts.find(
+      contact => contact.name === contactAdd.name
+    );
 
-    this.setState(prevState => ({
-      contacts: [newContact, ...prevState.contacts],
-    }));
+    if (CheckContact) {
+      window.alert(`${contactAdd.name} is already in contacts.`);
+      return;
+    } else {
+      const newContact = {
+        id: shortid.generate(),
+        name: contactAdd.name,
+        number: contactAdd.number,
+      };
+      console.log(newContact);
+      this.setState(prevState => ({
+        contacts: [newContact, ...prevState.contacts],
+      }));
+    }
   };
   // Удаление контакта
   handleDelete = e => {

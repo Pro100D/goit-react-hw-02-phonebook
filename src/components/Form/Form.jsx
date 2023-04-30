@@ -16,16 +16,7 @@ class Form extends Component {
   handleSubmit = evt => {
     evt.preventDefault();
 
-    const contactsArray = this.props.contacts;
-    const nameContact = evt.target.elements.name.value;
-
-    if (
-      contactsArray.findIndex(contact => nameContact === contact.name) !== -1
-    ) {
-      alert(`${nameContact} is already in contacts.`);
-    } else {
-      this.props.onSubmit(this.state);
-    }
+    this.props.onSubmit(this.state);
 
     this.reset();
   };
